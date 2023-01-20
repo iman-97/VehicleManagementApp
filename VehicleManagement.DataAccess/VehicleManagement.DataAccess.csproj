@@ -63,6 +63,10 @@
     <Compile Include="Migrations\202301181452501_Initial.designer.cs">
       <DependentUpon>202301181452501_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301191330162_AddCompleteTravel.cs" />
+    <Compile Include="Migrations\202301191330162_AddCompleteTravel.designer.cs">
+      <DependentUpon>202301191330162_AddCompleteTravel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
@@ -80,6 +84,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202301181452501_Initial.resx">
       <DependentUpon>202301181452501_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301191330162_AddCompleteTravel.resx">
+      <DependentUpon>202301191330162_AddCompleteTravel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -39,6 +39,7 @@ namespace VehicleManagement.UI.App_Start
             builder.RegisterType<Repository<Travel>>().As<IRepository<Travel>>();
             builder.RegisterType<Repository<Driver>>().As<IRepository<Driver>>();
             builder.RegisterType<Repository<Vehicle>>().As<IRepository<Vehicle>>();
+            builder.RegisterType<Repository<CompleteTravel>>().As<IRepository<CompleteTravel>>();
 
             // Set the dependency resolver to be Autofac.
             var container = builder.Build();

@@ -13,5 +13,6 @@ namespace VehicleManagement.DataAccess
         public DbSet<Travel> Travels { get; set; }
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<Driver> Drivers { get; set; }
+        public DbSet<CompleteTravel> CompleteTravels { get; set; }
     }
 }

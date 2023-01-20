@@ -1,14 +1,11 @@
 ﻿@model IEnumerable<VehicleManagement.Core.Models.Travel>
 
 @{
-    ViewBag.Title = "User Requests";
+    ViewBag.Title = "Index";
 }
 
-<h2>@User.Identity.Name Travel Requests</h2>
+<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Make a New Request", "Create", "Travel")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -83,9 +80,9 @@
             @Html.DisplayFor(modelItem => item.PhoneNumber)
         </td>
         <td>
-            @Html.ActionLink("Edit","Edit","Travel",new {id=item.Id},new {}) |
-            @Html.ActionLink("Details", "Details", "Travel", new { id=item.Id },new {}) |
-            @Html.ActionLink("Delete", "Delete","Travel", new { id=item.Id },new {})
+            @Html.ActionLink("Assign", "Assign", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

@@ -87,7 +87,6 @@ namespace VehicleManagement.UI.Controllers
             travelToEdit.PhoneNumber = travel.PhoneNumber;
             _travels.Commit();
 
-            ViewBag.TravelStatus = "Travel Edited";
             return RedirectToAction("Index", "Home");
         }
 
@@ -114,7 +113,6 @@ namespace VehicleManagement.UI.Controllers
             _travels.Delete(id);
             _travels.Commit();
 
-            ViewBag.TravelStatus = "Travel Deleted";
             return RedirectToAction("Index", "Home");
         }
 
