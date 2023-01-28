@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNet.Identity;
 using System.Linq;
 using System.Web.Mvc;
+using VehicleManagement.Core;
 using VehicleManagement.Core.Models;
 using VehicleManagement.DataAccess;
 
 namespace VehicleManagement.UI.Controllers
 {
-    [AllowAnonymous]
     public class TravelController : Controller
     {
         private readonly IRepository<Travel> _travels;
@@ -16,12 +16,6 @@ namespace VehicleManagement.UI.Controllers
         {
             _travels = travels;
             _users = users;
-        }
-
-        public ActionResult Index()
-        {
-            var list = _travels.Collection().ToList();
-            return View(list);
         }
 
         public ActionResult Details(int id)
@@ -47,11 +41,11 @@ namespace VehicleManagement.UI.Controllers
                 .FirstOrDefault();
 
             travel.UserId = user.Id;
+            travel.TravelStatus = TravelStatus.Pending;
             _travels.Insert(travel);
             _travels.Commit();
 
-            ViewBag.TravelStatus = "Travel Created";
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "User");
         }
 
         public ActionResult Edit(int id)
@@ -87,7 +81,7 @@ namespace VehicleManagement.UI.Controllers
             travelToEdit.PhoneNumber = travel.PhoneNumber;
             _travels.Commit();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "User");
         }
 
         public ActionResult Delete(int id)
@@ -113,7 +107,7 @@ namespace VehicleManagement.UI.Controllers
             _travels.Delete(id);
             _travels.Commit();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "User");
         }
 
     }

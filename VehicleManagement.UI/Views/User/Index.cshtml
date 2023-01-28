@@ -1,93 +1,24 @@
-﻿@model IEnumerable<VehicleManagement.Core.Models.Travel>
-
-@{
-    ViewBag.Title = "User Requests";
+﻿@{
+    ViewBag.Title = "User Panel";
 }
 
-<h2>@User.Identity.Name Travel Requests</h2>
-
-<p>
-    @Html.ActionLink("Make a New Request", "Create", "Travel")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CreatedAt)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Origin)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Destination)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StartDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StartTime)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Address)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Details)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PassengersCount)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PassengerFirstName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PassengerLastName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CreatedAt)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Origin)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Destination)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StartDate)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StartTime)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Details)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PassengersCount)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PassengerFirstName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PassengerLastName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PhoneNumber)
-        </td>
-        <td>
-            @Html.ActionLink("Edit","Edit","Travel",new {id=item.Id},new {}) |
-            @Html.ActionLink("Details", "Details", "Travel", new { id=item.Id },new {}) |
-            @Html.ActionLink("Delete", "Delete","Travel", new { id=item.Id },new {})
-        </td>
-    </tr>
-}
-
-</table>
+<h2>@User.Identity.Name Panel</h2>
+<br />
+<div class="col-md-12">
+    <div class="row">
+        @Html.ActionLink("Make a New Request", "Create", "Travel", new { }, new { @class = "btn btn-default" })
+    </div>
+    <br />
+    <div class="row">
+        @Html.ActionLink("Pending Requests", "UserPendingTravels", "User", new { }, new { @class = "btn btn-default" })
+    </div>
+    <br />
+    <div class="row">
+        @Html.ActionLink("Assign Requests", "UserAssignTravels", "User", new { }, new { @class = "btn btn-default" })
+    </div>
+    <br />
+    <div class="row">
+        @Html.ActionLink("Complete Requests", "UserCompleteTravels", "User", new { }, new { @class = "btn btn-default" })
+    </div>
+    <br />
+</div>

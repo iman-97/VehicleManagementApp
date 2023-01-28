@@ -5,8 +5,6 @@ namespace VehicleManagement.Core.Models
 {
     public class Travel : BaseEntity
     {
-        public int Id { get; set; }
-
         [Required]
         public string Origin { get; set; }
 
@@ -43,5 +41,6 @@ namespace VehicleManagement.Core.Models
         [Display(Name = "Phone Number")]
         public string PhoneNumber { get; set; }
         public int UserId { get; set; }
+        public TravelStatus TravelStatus { get; set; }
     }
 }

@@ -67,6 +67,14 @@
     <Compile Include="Migrations\202301191330162_AddCompleteTravel.designer.cs">
       <DependentUpon>202301191330162_AddCompleteTravel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202301200932038_AddIsBusyToDraverAndVehicle.cs" />
+    <Compile Include="Migrations\202301200932038_AddIsBusyToDraverAndVehicle.designer.cs">
+      <DependentUpon>202301200932038_AddIsBusyToDraverAndVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202301240720317_AddTravelStatus.cs" />
+    <Compile Include="Migrations\202301240720317_AddTravelStatus.designer.cs">
+      <DependentUpon>202301240720317_AddTravelStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository.cs" />
@@ -87,6 +95,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202301191330162_AddCompleteTravel.resx">
       <DependentUpon>202301191330162_AddCompleteTravel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301200932038_AddIsBusyToDraverAndVehicle.resx">
+      <DependentUpon>202301200932038_AddIsBusyToDraverAndVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202301240720317_AddTravelStatus.resx">
+      <DependentUpon>202301240720317_AddTravelStatus.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<VehicleManagement.Core.Models.Travel>
+
+@{
+    ViewBag.Title = "Complete Travels";
+}
+
+<h2>Complete Travels</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Origin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Destination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Details)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassengersCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassengerFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassengerLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedAt)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Origin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Destination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Details)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassengersCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassengerFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassengerLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+    </tr>
+}
+
+</table>

@@ -50,6 +50,7 @@
     <Compile Include="Models\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleNames.cs" />
+    <Compile Include="TravelStatus.cs" />
     <Compile Include="ViewModels\AssignTravelViewModel.cs" />
     <Compile Include="ViewModels\TravelViewModel.cs" />
   </ItemGroup>

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using VehicleManagement.Core;
 using VehicleManagement.Core.Models;
 using VehicleManagement.DataAccess;
 using VehicleManagement.UI.Models;
@@ -162,6 +164,14 @@ namespace VehicleManagement.UI.Controllers
                     };
                     _users.Insert(systemUser);
                     _users.Commit();
+
+                    //add role
+                    //var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
+                    //var roleManager = new RoleManager<IdentityRole>(roleStore);
+                    //await roleManager.CreateAsync(new IdentityRole(RoleNames.Admin));
+                    //await roleManager.CreateAsync(new IdentityRole(RoleNames.ApprovedUser));
+                    //await roleManager.CreateAsync(new IdentityRole(RoleNames.NotApprovedUser));
+                    await UserManager.AddToRoleAsync(user.Id, RoleNames.NotApprovedUser);
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     

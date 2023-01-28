@@ -247,8 +247,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -285,6 +283,14 @@
     <Content Include="Views\Travel\Delete.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Assign.cshtml" />
+    <Content Include="Views\User\AllUsers.cshtml" />
+    <Content Include="Views\User\UserPendingTravels.cshtml" />
+    <Content Include="Views\User\UserAssignTravels.cshtml" />
+    <Content Include="Views\User\UserCompleteTravels.cshtml" />
+    <Content Include="Views\Admin\CompleteTravels.cshtml" />
+    <Content Include="Views\Admin\AssignTravels.cshtml" />
+    <Content Include="Views\Admin\PendingTravels.cshtml" />
+    <Content Include="Views\Admin\Test.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
